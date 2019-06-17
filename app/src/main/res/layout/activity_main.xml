@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="#305aa7"
-                app:title="Trang Chu"></android.support.v7.widget.Toolbar>
+                app:title="Trang Chủ"></android.support.v7.widget.Toolbar>
 
             <ViewFlipper
                 android:id="@+id/viewflipper"
@@ -55,7 +55,7 @@
         <android.support.design.widget.NavigationView
             android:id="@+id/navigationview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="start">
 
             <ListView

@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -24,6 +26,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.longhoang.banhang.R;
 import com.example.longhoang.banhang.adapter.LoaispAdapter;
+import com.example.longhoang.banhang.model.Giohang;
 import com.example.longhoang.banhang.model.Loaisp;
 import com.example.longhoang.banhang.model.Sanpham;
 import com.example.longhoang.banhang.adapter.SanphamAdapter;
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     String hinhanhloaisp = "";
     ArrayList<Sanpham> mangsanpham;
     SanphamAdapter sanphamAdapter;
+    public static ArrayList<Giohang> manggiohang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +74,22 @@ public class MainActivity extends AppCompatActivity {
         }
         ActionBar();
         ActionViewFlipper();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menugiohang:
+                Intent intent = new Intent(getApplicationContext(), com.example.longhoang.banhang.activity.Giohang.class);
+                startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void CatchOnItemListView() {
@@ -117,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 4:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())) {
-                            Intent intent = new Intent(MainActivity.this, ThongtinActivity.class);
+                            Intent intent = new Intent(MainActivity.this, ThongTinActivity.class);
                             startActivity(intent);
                         } else {
                             CheckConnection.showToast_Short(getApplicationContext(), "Kiểm tra lại kết nối");
@@ -246,5 +266,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewmanhinhchinh.setHasFixedSize(true);
         recyclerViewmanhinhchinh.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerViewmanhinhchinh.setAdapter(sanphamAdapter);
+        if (manggiohang != null) {
+
+        } else {
+            manggiohang = new ArrayList<>();
+        }
     }
 }

@@ -45,9 +45,8 @@
 
 3.	Phân công công việc:
 
-STT		Họ và tên		Các nội dung thực hiện 
+	Hoàng Long	
 
-1		Hoàng Long		
 						Thiết kế bảng database, config server, viết truy vấn php
 
 						Thiết kế giao diện màn hình chính, viewflipper chạy quảng cáo, tạo 
@@ -55,7 +54,8 @@ STT		Họ và tên		Các nội dung thực hiện
 
 						Thiết kế giao diện màn hình điện thoại và laptop, tạo dữ liệu cho màn hình điện thoại và laptop
 
-2		Lê Văn Thông	
+	Lê Văn Thông	
+
 						Thiết kế và gán dữ liệu cho màn hình chi tiết sản phẩm, tạo nút thêm giỏ hàng
 
 						Thiết kế và gán dữ liệu lên giỏ hàng, tạo nút cộng trừ sản phẩm

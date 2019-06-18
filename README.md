@@ -1,4 +1,4 @@
-<!-- 1.	Thiết kế giao diện ứng dụng:
+1.	Thiết kế giao diện ứng dụng:
 	https://marvelapp.com/5e10b38
 
 2.	Mô tả ứng dụng:
@@ -36,4 +36,3 @@ STT		Họ và tên		Các nội dung thực hiện
 						Thiết kế và gán dữ liệu lên giỏ hàng, tạo nút cộng trừ sản phẩm
 						Thiết kế giao diện thông tin khách hàng
 
- -->
